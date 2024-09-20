@@ -85,6 +85,23 @@
             background-color: #74008b; 
             transform: scale(1.05); 
         }
+        .embed {
+            background-color: #2c2f33;
+            border-left: 5px solid #7289da; /* Discordの青色 */
+            color: white;
+            padding: 20px;
+            margin: 20px;
+            border-radius: 5px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
+        .embed-title {
+            font-size: 1.5em;
+            margin: 0;
+            font-weight: bold;
+        }
+        .embed-description {
+            margin: 10px 0 0;
+        }
         @keyframes fadeIn {
             from { opacity: 0; }
             to { opacity: 1; }
@@ -106,5 +123,11 @@
         </div>
     </div>
     <div class="welcome">Welcome.</div>
+
+    <!-- Discord Embed -->
+    <div class="embed">
+        <div class="embed-title">Muscovite-Nuker</div>
+        <div class="embed-description">Discord Good Nuker</div>
+    </div>
 </body>
 </html>
