@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Muscovite Home</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet"> <!-- フォントの追加 -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
     <style>
         body {
             margin: 0;
@@ -12,9 +12,9 @@
             overflow: hidden;
             display: flex;
             flex-direction: column;
-            background: url('https://raw.githubusercontent.com/Rain436/Muscovite-Nuker/main/image/websiteBackground.jpg') no-repeat center center fixed; /* 背景画像 */
-            background-size: cover; /* 背景画像のサイズを調整 */
-            position: relative; /* 中央揃えのために必要 */
+            background: url('https://raw.githubusercontent.com/Rain436/Muscovite-Nuker/main/image/websiteBackground.jpg') no-repeat center center fixed;
+            background-size: cover; 
+            position: relative; 
         }
         .overlay {
             position: absolute;
@@ -22,48 +22,48 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background-color: rgba(0, 0, 0, 0.5); /* 背景を黒で覆う */
-            backdrop-filter: blur(5px); /* ブラー効果 */
-            z-index: 1; /* 上に重ねる */
+            background-color: rgba(0, 0, 0, 0.5); 
+            backdrop-filter: blur(5px); 
+            z-index: 1; 
         }
         .navbar {
             width: 100%;
-            background-color: rgba(39, 39, 39, 0.8); /* 半透明の黒 */
+            background-color: rgba(39, 39, 39, 0.8);
             color: white;
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 10px 20px;
-            position: relative; /* 絶対位置に対する基準を設定 */
-            z-index: 2; /* ナビゲーションバーを最前面に */
-            opacity: 0; /* 初期状態で非表示 */
-            animation: fadeIn 1s forwards; /* フェードインアニメーション */
-            animation-delay: 0.5s; /* アニメーションの遅延 */
+            position: relative; 
+            z-index: 2; 
+            opacity: 0; 
+            animation: fadeIn 1s forwards; 
+            animation-delay: 0.5s; 
         }
         .buttons {
-            margin-left: 20px; /* 左に寄せるためのマージン */
+            margin-left: 20px; 
         }
         h1 {
-            color: white; /* フォントの色をホワイトに */
+            color: white; 
             margin: 0;
-            font-size: 2em; /* フォントサイズを調整 */
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* 影を追加 */
-            font-family: 'Montserrat', sans-serif; /* フォントファミリーを設定 */
+            font-size: 2em; 
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); 
+            font-family: 'Montserrat', sans-serif;
         }
         .welcome {
-            position: absolute; /* 絶対位置で中央に配置 */
+            position: absolute; 
             top: 50%;
             left: 50%;
-            transform: translate(-50%, -50%); /* 中央に調整 */
-            color: #110120; /* フォントの色をイエローに */
-            font-size: 4em; /* フォントサイズを調整 */
-            text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.9), 0 0 25px rgba(255, 255, 255, 0.2); /* より強調した影 */
-            z-index: 2; /* ナビゲーションバーの上に表示 */
-            letter-spacing: 5px; /* 文字間隔を調整 */
-            font-family: 'Montserrat', sans-serif; /* フォントファミリーを設定 */
-            opacity: 0; /* 初期状態で非表示 */
-            animation: slideIn 1s forwards; /* スライドインアニメーション */
-            animation-delay: 1s; /* アニメーションの遅延 */
+            transform: translate(-50%, -50%);
+            color: #110120; 
+            font-size: 4em; 
+            text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.9), 0 0 25px rgba(255, 255, 255, 0.2);
+            z-index: 2; 
+            letter-spacing: 5px; 
+            font-family: 'Montserrat', sans-serif; 
+            opacity: 0; 
+            animation: slideIn 1s forwards; 
+            animation-delay: 1s; 
         }
         .button {
             margin: 0 5px;
@@ -74,19 +74,17 @@
             border: none;
             border-radius: 5px;
             cursor: pointer;
-            text-decoration: none; /* 下線を消す */
+            text-decoration: none; 
             transition: background-color 0.3s, transform 0.2s;
-            opacity: 0; /* 初期状態で非表示 */
-            animation: fadeIn 1s forwards; /* フェードインアニメーション */
-            animation-delay: 1.5s; /* アニメーションの遅延 */
-            animation-fill-mode: forwards; /* アニメーションを保持 */
+            opacity: 0; 
+            animation: fadeIn 1s forwards; 
+            animation-delay: 1.5s; 
+            animation-fill-mode: forwards; 
         }
         .button:hover {
-            background-color: #74008b; /* ホバー時の色 */
-            transform: scale(1.05); /* ホバー時に少し拡大 */
+            background-color: #74008b; 
+            transform: scale(1.05); 
         }
-
-        /* アニメーション定義 */
         @keyframes fadeIn {
             from { opacity: 0; }
             to { opacity: 1; }
@@ -98,7 +96,7 @@
     </style>
 </head>
 <body>
-    <div class="overlay"></div> <!-- ブラー効果をかけるオーバーレイ -->
+    <div class="overlay"></div>
     <div class="navbar">
         <h1>Muscovite</h1>
         <div class="buttons">
@@ -107,20 +105,6 @@
             <button class="button">Discord</button>
         </div>
     </div>
-
-    <!-- 中央に表示するテキスト -->
     <div class="welcome">Welcome.</div>
-
-    <script>
-        const image = document.querySelector('.image');
-
-        document.addEventListener('mousemove', (event) => {
-            const { clientX, clientY } = event;
-            // 画像の中心をマウスの位置に合わせる
-            const offsetX = image.offsetWidth / 2;
-            const offsetY = image.offsetHeight / 2;
-            image.style.transform = `translate(${clientX - offsetX}px, ${clientY - offsetY}px)`;
-        });
-    </script>
 </body>
 </html>
