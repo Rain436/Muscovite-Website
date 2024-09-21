@@ -123,15 +123,28 @@
         .video-container {
             margin: 20px;
             padding: 20px;
-            border: 2px solid black;
             border-radius: 10px;
             background-color: rgba(0, 0, 0, 0.8);
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: center;
         }
         .video-container iframe {
             width: 100%;
-            height: 315px;
+            max-width: 800px; /* 最大幅を設定 */
+            height: 450px; /* 高さを調整 */
             border: none;
+        }
+        .footer {
+            width: 100%;
+            background-color: black;
+            padding: 20px 0;
+            position: absolute;
+            bottom: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 2;
         }
         @keyframes fadeIn {
             from { opacity: 0; }
@@ -164,6 +177,13 @@
     <!-- Video Container -->
     <div class="video-container">
         <iframe src="https://www.youtube.com/embed/VIDEO_ID" allowfullscreen></iframe>
+    </div>
+
+    <!-- Footer with Black Bar -->
+    <div class="footer">
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/VIDEO_ID" allowfullscreen></iframe>
+        </div>
     </div>
 </body>
 </html>
