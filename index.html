@@ -13,8 +13,10 @@
             display: flex;
             flex-direction: column;
             background: url('https://raw.githubusercontent.com/Rain436/Muscovite-Nuker/main/image/websiteBackground.jpg') no-repeat center center fixed;
-            background-size: cover; 
-            position: relative; 
+            background-size: cover;
+            position: relative;
+            font-family: 'Montserrat', sans-serif;
+            color: white;
         }
         .overlay {
             position: absolute;
@@ -22,85 +24,101 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background-color: rgba(0, 0, 0, 0.5); 
-            backdrop-filter: blur(5px); 
+            background-color: rgba(0, 0, 0, 0.7); 
+            backdrop-filter: blur(8px); 
             z-index: 1; 
         }
         .navbar {
             width: 100%;
-            background-color: rgba(39, 39, 39, 0.8);
-            color: white;
+            background-color: rgba(39, 39, 39, 0.9);
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 10px 20px;
+            padding: 15px 30px;
             position: relative; 
             z-index: 2; 
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
             opacity: 0; 
             animation: fadeIn 1s forwards; 
             animation-delay: 0.5s; 
         }
         .buttons {
-            margin-left: 20px; 
+            display: flex;
+            gap: 10px; 
         }
         h1 {
-            color: white; 
             margin: 0;
-            font-size: 2em; 
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); 
-            font-family: 'Montserrat', sans-serif;
+            font-size: 2.5em; 
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9); 
         }
         .welcome {
             position: absolute; 
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            color: #110120; 
             font-size: 4em; 
-            text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.9), 0 0 25px rgba(255, 255, 255, 0.2);
+            text-shadow: 5px 5px 15px rgba(0, 0, 0, 0.8);
             z-index: 2; 
             letter-spacing: 5px; 
-            font-family: 'Montserrat', sans-serif; 
             opacity: 0; 
             animation: slideIn 1s forwards; 
             animation-delay: 1s; 
         }
         .button {
-            margin: 0 5px;
-            padding: 10px 20px;
+            padding: 12px 25px;
             font-size: 16px;
-            color: white;
-            background-color: #2c022e;
+            background-color: #4c2c4e; 
             border: none;
             border-radius: 5px;
             cursor: pointer;
-            text-decoration: none; 
             transition: background-color 0.3s, transform 0.2s;
+            position: relative; 
+            overflow: hidden; 
+            color: white;
+            text-decoration: none; 
+            display: inline-block;
             opacity: 0; 
             animation: fadeIn 1s forwards; 
             animation-delay: 1.5s; 
-            animation-fill-mode: forwards; 
+        }
+        .button::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            width: 300%;
+            height: 300%;
+            background: rgba(255, 255, 255, 0.2);
+            transition: all 0.5s;
+            border-radius: 50%;
+            z-index: 0;
+            transform: translate(-50%, -50%) scale(0);
+        }
+        .button:hover::after {
+            transform: translate(-50%, -50%) scale(1);
         }
         .button:hover {
             background-color: #74008b; 
             transform: scale(1.05); 
         }
         .embed {
-            background-color: #2c2f33;
+            background-color: rgba(44, 47, 51, 0.8);
             border-left: 5px solid #7289da; /* Discordの青色 */
-            color: white;
             padding: 20px;
             margin: 20px;
             border-radius: 5px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(10px);
         }
         .embed-title {
-            font-size: 1.5em;
+            font-size: 1.8em;
             margin: 0;
             font-weight: bold;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
         }
         .embed-description {
-            margin: 10px 0 0;
+            margin-top: 10px;
+            font-size: 1.2em;
         }
         @keyframes fadeIn {
             from { opacity: 0; }
