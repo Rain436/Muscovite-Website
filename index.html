@@ -120,21 +120,6 @@
             margin-top: 10px;
             font-size: 1.2em;
         }
-        .video-container {
-            margin: 20px;
-            padding: 20px;
-            border-radius: 10px;
-            background-color: rgba(0, 0, 0, 0.8);
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-            display: flex;
-            justify-content: center;
-        }
-        .video-container iframe {
-            width: 100%;
-            max-width: 800px; /* 最大幅を設定 */
-            height: 450px; /* 高さを調整 */
-            border: none;
-        }
         .footer {
             width: 100%;
             background-color: black;
@@ -145,6 +130,16 @@
             justify-content: center;
             align-items: center;
             z-index: 2;
+        }
+        .video-container {
+            width: 100%;
+            max-width: 800px; /* 最大幅を設定 */
+            height: 450px; /* 高さを調整 */
+        }
+        .video-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
         }
         @keyframes fadeIn {
             from { opacity: 0; }
@@ -172,11 +167,6 @@
     <div class="embed">
         <div class="embed-title">Muscovite-Nuker</div>
         <div class="embed-description">Discord Good Nuker</div>
-    </div>
-
-    <!-- Video Container -->
-    <div class="video-container">
-        <iframe src="https://www.youtube.com/embed/VIDEO_ID" allowfullscreen></iframe>
     </div>
 
     <!-- Footer with Black Bar -->
